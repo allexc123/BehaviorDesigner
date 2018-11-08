@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            id="com.mm.behaviordesigner.ui.BehaviorDesignerEditor"
+            name="Behavior Designer"
+            icon="icons/sample.png"
+            extensions="bt"
+            class="com.mm.behaviordesigner.ui.BehaviorDesignerEditor"
+            contributorClass="com.mm.behaviordesigner.actions.BehaviorDesignerActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="Behavior Designer Wizards"
+            id="com.mm.behaviordesigner">
+      </category>
+      <wizard
+            id="com.mm.behaviordesigner.wizards.BehaviorDesignerWizard"
+            name="Behavior Designer Editor file"
+            icon="icons/sample.png"
+            class="com.mm.behaviordesigner.wizards.BehaviorDesignerWizard"
+            category="com.mm.behaviordesigner">
+      </wizard>
+   </extension>
+
+</plugin>
