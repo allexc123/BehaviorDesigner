@@ -56,7 +56,7 @@ public class BehaviorDesignerEditor extends GraphicalEditorWithPalette{
 		PaletteRoot root = new PaletteRoot();
 		
 		PaletteDrawer drawer = new PaletteDrawer("Composites");
-		ImageDescriptor descriptor = AbstractUIPlugin.imageDescriptorFromPlugin(GlobalKey.PLUGIN_ID, IImageKey.jiantou);
+		ImageDescriptor descriptor = AbstractUIPlugin.imageDescriptorFromPlugin(GlobalKey.PLUGIN_ID, "icons/alt_window16.gif");
 		CreationToolEntry creationEntry = new CreationToolEntry("Sequence", "创建sequence模型", new SimpleFactory(SequenceModel.class), descriptor, descriptor);
 		drawer.add(creationEntry);
 		
