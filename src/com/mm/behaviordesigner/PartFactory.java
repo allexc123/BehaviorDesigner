@@ -3,8 +3,12 @@ package com.mm.behaviordesigner;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPartFactory;
 
-import com.mm.behaviordesigner.model.SequenceModel;
-import com.mm.behaviordesigner.part.SequenceEditPar;
+import com.mm.behaviordesigner.model.CompositeModel;
+import com.mm.behaviordesigner.model.ContentModel;
+import com.mm.behaviordesigner.model.EntryModel;
+import com.mm.behaviordesigner.part.CompositeEditPar;
+import com.mm.behaviordesigner.part.ContentEditPar;
+import com.mm.behaviordesigner.part.EntryEditPar;
 
 public class PartFactory implements EditPartFactory {
 
@@ -17,8 +21,14 @@ public class PartFactory implements EditPartFactory {
 	}
 	
 	private EditPart getPartForElement(Object model) {
-		if(model instanceof SequenceModel) {
-			return new SequenceEditPar();
+		if(model instanceof ContentModel) {
+			return new ContentEditPar();
+			
+		}else if(model instanceof EntryModel) {
+			return new EntryEditPar();
+			
+		}else if(model instanceof CompositeModel) {
+			return new CompositeEditPar();
 			
 		}
 			
